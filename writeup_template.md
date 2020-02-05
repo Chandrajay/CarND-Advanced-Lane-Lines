@@ -111,7 +111,8 @@ I did this in 24th cell code, using the formula given in the lecture and shaded 
 
 
 Here's a [link to my video result](./project_video_output.mp4)
-and [challenge video](./challenge_video_output.mp4)
+ [challenge video](./challenge_video_output.mp4)
+  [Harder challenge video](./Harder_challenge_video_output.mp4)
 
 
 ---
