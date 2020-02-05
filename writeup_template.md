@@ -35,15 +35,9 @@ The steps of this project are the following:
 [video3]: ./Harder_challenge_video_output.mp4 "Output video Harder"
 
 
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
-
-You're reading it!
 
 ### Camera Calibration
 
-#### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
 The code for this step is contained in the second code cell of the IPython notebook located in "proj2.ipynb" 
 
@@ -55,18 +49,18 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 ### Pipeline (single images)
 
-#### 1. Provide an example of a distortion-corrected image.
+#### 1. Distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 ![alt text][image2]
 
-#### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
+#### 2.Binary image result.
 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines 2 through 38 in the 13th code cell.  Here's an example of my output for this step. 
 
 ![alt text][image3]
 
-#### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
+#### 3.Perspective transform 
 
 The code for my perspective transform includes a function called `warp() and warp1()`, which appears in 14th cell code and 17th cell code in the file `proj2.ipynb`.  The `warp()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
@@ -99,13 +93,13 @@ I verified that my perspective transform was working as expected by drawing the 
 ![alt text][image4]
 ![alt text][image7]
 
-#### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+#### 4. Identification of Lane Lines
 
 Then I used a function 'find_lane_pixels()' where I took a histogram of the image which gives the peak points that signifies that there is a lane present, Next I applied a window search to find the peaks for the left and right lane points. Then I create a window that searches from the bottom of the image to Identify the nonzero pixels in x and y within the window. 
 
 ![alt text][image5]
 
-#### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+#### 5. Radius of curvature of the lane and the position of the vehicle with respect to center.
 
 I did this in 24th cell code, using the formula given in the lecture and shaded the region between lane lines as shown below:
 
@@ -115,16 +109,16 @@ I did this in 24th cell code, using the formula given in the lecture and shaded 
 
 ### Pipeline (video)
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 Here's a [link to my video result](./project_video_output.mp4)
-and [video2]
+and [challenge video](./challenge_video_output.mp4)
 
 
 ---
 
-### Discussion
+### Challenging Part
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+The most challenging part of this model is to find the lanes when the road conditions (Color of the road has a brighter gradient and white shades), A proper threshold filter can be used to detect the exact lane lines in the video.
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The places where the lanes are not visible and have a high light focus on the camera the camera goes blind and will not be able to detect the lanes if the road is cureved during the above mentioned scenarios, We cannot use the previous lane lines and proceed to predict the lanes
+
