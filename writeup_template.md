@@ -117,9 +117,10 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 ---
 
-### Challenging Part
+### Discussion
+
+Challenging Part
 
 The most challenging part of this model is to find the lanes when the road conditions (Color of the road has a brighter gradient and white shades), A proper threshold filter can be used to detect the exact lane lines in the video.
 
 The places where the lanes are not visible and have a high light focus on the camera the camera goes blind and will not be able to detect the lanes if the road is cureved during the above mentioned scenarios, We cannot use the previous lane lines and proceed to predict the lanes
-
