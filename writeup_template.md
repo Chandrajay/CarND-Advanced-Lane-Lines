@@ -27,7 +27,7 @@ The steps of this project are the following:
 [image2]: ./output_images/undistort_result_Img.jpg "Undistorted"
 [image3]: ./output_images/Combin_s_Grad_thresh.jpg "Binary Example"
 [image4]: ./output_images/Birdseye.jpg "Birds Eye"
-[image7]: ./output_images/BirdsEye_Combin_binary.jpg "Birds Eye Binary"
+[image7]: ./output_images/BirdsEye_Combin_binary_img.jpg "Birds Eye Binary"
 [image5]: ./output_images/Lane_Pixels.jpg "Lane Pixels"
 [image6]: ./output_images/Final_image.jpg "Final Image"
 [video1]: ./project_video_output.mp4 "Output video"
