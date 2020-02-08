@@ -110,9 +110,11 @@ I did this in 24th cell code, using the formula given in the lecture and shaded 
 ### Pipeline (video)
 
 
-Here's a [link to my video result](./project_video_output.mp4)
- [challenge video](./challenge_video_output.mp4)
-  [Harder challenge video](./Harder_challenge_video_output.mp4)
+Here's a [link to my project video result](./project_video_output.mp4)
+
+Link for [challenge video](./challenge_video_output.mp4)
+ 
+ Link for [Harder challenge video](./Harder_challenge_video_output.mp4)
 
 
 ---
